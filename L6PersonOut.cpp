@@ -15,9 +15,10 @@ private:
     char sex;
 };
 
-Person::Person() {
-    this -> age = 0;
-    this -> sex = 'U';
+Person::Person():age(0), sex('U') {
+    //Non-initialization list approach
+    //this -> age = 0;
+    //this -> sex = 'U';
 }
 
 Person::Person(int age, char sex) {
@@ -48,6 +49,7 @@ int main() {
     cout << Jane.getAge() << endl;
     //Mick.age = 24;
     //Mick.sex = 'M';
+    cout << Mick.getAge() << endl;
     Mick.setAge(24);
     Mick.setSex('M');
 
