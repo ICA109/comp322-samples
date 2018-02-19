@@ -4,6 +4,7 @@ using namespace std;
 
 class Person {
 public:
+    Person();
     bool canVote();
     void setAge(int age);
     void setSex(char sex);
@@ -12,6 +13,10 @@ private:
     char sex;
 };
 
+Person::Person() {
+    this -> age = 0;
+    this -> sex = 'U';
+}
 
 bool Person::canVote() {
     if (age >= 18) {
