@@ -1,24 +1,31 @@
 #include <iostream>
 using namespace std;
 
+
 class Person {
 public:
-    bool canVote() {
-        if (age >= 18) {
-            return true;
-        }
-        return false;
-    }
-    void setAge(int age) {
-        this -> age = age;
-    }
-    void setSex(char sex) {
-        this -> sex = sex;
-    }
+    bool canVote();
+    void setAge(int age);
+    void setSex(char sex);
 private:
     int age;
     char sex;
-};  //Needs ; at end
+};
+
+
+bool canVote() {
+    if (age >= 18) {
+        return true;
+    }
+    return false;
+}
+void setAge(int age) {
+    this -> age = age;
+}
+void setSex(char sex) {
+    this -> sex = sex;
+}
+
 
 int main() {
     Person Mick;
