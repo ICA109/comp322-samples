@@ -13,16 +13,16 @@ private:
 };
 
 
-bool canVote() {
+bool Person::canVote() {
     if (age >= 18) {
         return true;
     }
     return false;
 }
-void setAge(int age) {
+void Person::setAge(int age) {
     this -> age = age;
 }
-void setSex(char sex) {
+void Person::setSex(char sex) {
     this -> sex = sex;
 }
 
