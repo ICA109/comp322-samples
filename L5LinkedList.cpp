@@ -21,10 +21,10 @@ void appendElement (Element **list, Element **tail, int data) {
     }
 }
 
-void printList (Element *list) {
-    while(list) {
-        cout << list->data << " ";
-        list = list->next;
+void printList (Element **list) {
+    while(*list) {
+        cout << (*list)->data << " ";
+        *list = (*list)->next;
     }
 }
 
@@ -43,7 +43,7 @@ int main() {
     appendElement (&list, &tail, 5);
     appendElement (&list, &tail, 10);
     appendElement (&list, &tail, 15);
-    printList(list);
+    printList(&list);
     deleteList(&list);
     cout << endl;
     return 0;
